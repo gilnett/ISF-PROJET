@@ -25,7 +25,7 @@ let model = null;
 let autoRotate = false;
 
 const loader = new GLTFLoader();
-loader.load('./model.glb', function (gltf) {
+loader.load('model.glb', function (gltf) {
   model = gltf.scene;
   scene.add(model);
 
