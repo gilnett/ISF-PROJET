@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Viewer</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="logo">3D Viewer</div>
+
+      <span class="burger-icon">
+        <div id="invivisi">
+          <span id="invivisi"><a href="2d\index.html">2D</a></span>
+          <span id="invivisi"><a href="2d\index.html">3D</a></span>
+        </div>
+      </span>
+    </div>
+    <div class="container">
+      <div class="modele">
+        <canvas id="3d-canvas"></canvas>
+      </div>
+      <div class="barre">
+        <div class="group">
+          <button id="rotate-left" class="bouton">
+            <span class="material-icons">rotate_left</span>
+            <span class="label">Rotate Left</span>
+          </button>
+          <button id="rotate-right" class="bouton">
+            <span class="material-icons">rotate_right</span>
+            <span class="label">Rotate Right</span>
+          </button>
+        </div>
+        <div class="group">
+          <button id="zoom-in" class="bouton">
+            <span class="material-icons">zoom_in</span>
+            <span class="label">Zoom In</span>
+          </button>
+          <button id="zoom-out" class="bouton">
+            <span class="material-icons">zoom_out</span>
+            <span class="label">Zoom Out</span>
+          </button>
+        </div>
+        <div class="group">
+          <button id="reset-view" class="bouton">
+            <span class="material-icons">refresh</span>
+            <span class="label">Reset View</span>
+          </button>
+          <button id="toggle-auto-rotate" class="bouton">
+            <span class="material-icons">autorenew</span>
+            <span class="label">Auto Rotate</span>
+          </button>
+        </div>
+        <div class="group">
+          <button id="move-x" class="bouton">
+            <span class="material-icons">swap_horiz</span>
+            <span class="label">Rotate Y</span>
+          </button>
+          <button id="move-y" class="bouton">
+            <span class="material-icons">swap_vert</span>
+            <span class="label">Rotate X</span>
+          </button>
+          <button id="move-z" class="bouton">
+            <span class="material-icons">rotate_90_degrees_ccw</span>
+            <span class="label">Rotate Z</span>
+          </button>
+        </div>
+        <div class="group">
+          <button id="compress-x" class="bouton">
+            <span class="material-icons">compress</span>
+            <span class="label">Compress X</span>
+          </button>
+          <button id="decompress-x" class="bouton">
+            <span class="material-icons">expand</span>
+            <span class="label">Decompress X</span>
+          </button>
+        </div>
+        <div class="group">
+          <button id="compress-y" class="bouton">
+            <span class="material-icons">compress</span>
+            <span class="label">Compress Y</span>
+          </button>
+          <button id="decompress-y" class="bouton">
+            <span class="material-icons">expand</span>
+            <span class="label">Decompress Y</span>
+          </button>
+        </div>
+        <div class="group">
+          <button id="compress-z" class="bouton">
+            <span class="material-icons">compress</span>
+            <span class="label">Compress Z</span>
+          </button>
+          <button id="decompress-z" class="bouton">
+            <span class="material-icons">expand</span>
+            <span class="label">Decompress Z</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

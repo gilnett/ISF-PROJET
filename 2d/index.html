@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>editeur</title>
+    <!-- Police Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Cropper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Icônes Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top-bar">
+      <button id="theme-toggle" class="theme-toggle">
+        <span class="material-icons">brightness_6</span>
+      </button>
+      <a href="../3d/index.html" class="redirect-3d">
+        Accéder à la partie 3D
+      </a>
+      <div class="alert-circle">
+        !
+        <div class="alert-message">
+          Si l'image est trop grande, la qualité sera réduite pour éviter que la page plante. Le max c'est 800x800px.
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="editor-container">
+        <div class="image-container" >
+          <!-- Axes X et Y -->
+          <div id="axis-x" style="position: absolute; top: 50%; left: 0; width: 100%; height: 0.1rem; background-color: red; z-index: 1000;"></div>
+          <div id="axis-y" style="position: absolute; top: 0; left: 50%; width: 0.1rem; height: 100%; background-color: red; z-index: 1000;"></div>
+
+          <!-- Bloc pointille -->
+          <div style="position:absolute; top:50%; left:50%; width:25%; height:25%; border-top: 7px dotted rgb(255, 0, 0); border-right: 7px dotted rgb(255, 0, 0); transform-origin: center; transform: translate(-50%, -50%) rotate(0deg); z-index:1000; clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 50%);" id="dotted-block"></div>
+          <img alt="image" id="image">
+        
+        
+        </img>
+        </div>
+        <div class="preview-container">
+          <img alt="image" id="preview-image" />
+        </div>
+      </div>
+      <input type="file" id="file" accept="image/*" />
+      <label for="file">photo</label>
+      <div class="options-btn hide">
+        <div class="btn-group">
+          <button id="rotation-gauche">
+            <span class="material-icons">rotate_left</span>
+          </button>
+          <button id="rotation-droite"> 
+            <span class="material-icons">rotate_right</span>
+          </button>
+        </div>
+        <div class="btn-group">
+          <button id="flip-x">
+            <span class="material-icons">flip</span>
+          </button>
+          <button id="flip-y" >
+            <span class="material-icons" style="transform: rotate(90deg);">flip</span>
+          </button>
+        </div>
+        <div class="btn-group">
+          <button id="allonger-x">
+            <span class="material-icons">open_in_full</span>
+          </button>
+          <button id="compresser-x">
+            <span class="material-icons">close_fullscreen</span>
+          </button>
+        </div>
+        <div class="btn-group">
+          <button id="allonger-y">
+            <span class="material-icons">open_in_full</span>
+          </button>
+          <button id="compresser-y">
+            <span class="material-icons">close_fullscreen</span>
+          </button>
+        </div>
+        <div class="btn-group">
+          <button id="hide-elements">
+            <span class="material-icons">visibility_off</span> Affichage
+          </button>
+        </div>
+        <div class="btn-group">
+          <button id="select-container">
+            <span class="material-icons">select_all</span>
+          </button>
+        </div>
+      </div>
+      <div class="bottom-container">
+        <div class="action-btns">
+          <a href="" id="download" class="hide">
+            <span class="material-icons">download</span> Download
+          </a>
+        </div>
+      
+        <div id="matrix-style" style="display: none;">Matrice:
+          <br>
+          <span id="matrix-display">[1, 0]<br>[0, 1]</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" type="module"></script>
+    <script src="themes.js" type="module"></script>
+    <link rel="stylesheet" href="themes.css" />
+  </body>
+</html>

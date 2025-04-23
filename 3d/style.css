@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #f0f4f8;
+  overflow: hidden;
+}
+
+.top-bar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between;
+  background-color: #19326b;
+  color: #f8fafc;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  margin-top: 3.5rem; 
+}
+
+.modele {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas#3d-canvas {
+  display: block;
+}
+
+.barre {
+  background-color: rgba(0, 0, 0, 0.223);
+  position: fixed;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 10px;
+  font-size: 18px;
+  width: 20%;
+  height: auto;
+}
+/* chatgpt 3.5 */
+/* PC portable 15.6 pouces (1366px - 1440px) */
+@media (max-width: 1440px) {
+  .barre {
+    font-size: 17px;
+    width: 25%;
+  }
+}
+
+/* Tablette (max-width: 768px) */
+@media (max-width: 768px) {
+  .barre {
+    font-size: 16px;
+    width: 40%;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .barre {
+    font-size: 14px;
+    width: 60%;
+  }
+}
+
+/* Grand écran PC 25 à 27 pouces (min-width: 1920px) */
+@media (min-width: 1920px) {
+  .barre {
+    font-size: 20px;
+    width: 15%;
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.bouton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bouton:hover {
+  background-color: #2563eb;
+}
+
+.bouton .label {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.material-icons {
+  font-size: 24px;
+}
+
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+.burger-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #322e2e;
+  border-radius: 10%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

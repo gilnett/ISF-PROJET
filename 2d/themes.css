@@ -1,0 +1,23 @@
+/* Thème clair (par défaut) */
+:root {
+  --background-color: #f8fafc;
+  --text-color: #020617;
+  --action: #2563eb;
+  --action-light: #cee1fa;
+}
+
+/* Thème sombre */
+body.dark-theme {
+  --background-color: #1e293b;
+  --text-color: #f8fafc;
+  --action: #3b82f6;
+  --action-light: #2563eb;
+}
+
+/* Thème gris */
+body.gray-theme {
+  --background-color: #d1d5db;
+  --text-color: #1f2937;
+  --action: #6b7280;
+  --action-light: #9ca3af;
+}
