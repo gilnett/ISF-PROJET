@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: './', // Important pour que les assets soient trouvés après build
+  base: '/', // Définit le chemin de base pour les ressources sur Vercel
   server: {
     host: true, // utile pour Codespaces ou test réseau
     port: 5173
